@@ -38,10 +38,14 @@ employeeData_df['DOB'] = employeeData_df['DOB'].dt.strftime('%m/%d/%Y')
 
 #print(employeeData_df)
 #hides ssn
-
-for i in range(0,len(employeeData_df)):
-    employeeData_df.iloc[i]['SSN'] = '***-**' + employeeData_df.iloc[i]['SSN'][6:]
-    print('***-**' + employeeData_df.iloc[i]['SSN'][6:])
+for index, row in employeeData_df.iterrows():
+    
+    row['SSN'] = '***-**' + row['SSN'][6:]
+    3print(row['SSN'])
+    
+#for i in range(0,len(employeeData_df)):
+#    employeeData_df.iloc[i]['SSN'] = '***-**' + employeeData_df.iloc[i]['SSN'][6:]
+ #   print('***-**' + employeeData_df.iloc[i]['SSN'][6:])
 
 
 #change states
