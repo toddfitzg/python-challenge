@@ -39,9 +39,9 @@ employeeData_df['DOB'] = employeeData_df['DOB'].dt.strftime('%m/%d/%Y')
 #print(employeeData_df)
 #hides ssn
 
-#for i in range(0,len(employeeData_df)):
-#    employeeData_df.iloc[i]['SSN'] = '***-**' + employeeData_df.iloc[i]['SSN'][6:]
-    #print('***-**' + employeeData_df.iloc[i]['SSN'][6:])
+for i in range(0,len(employeeData_df)):
+    employeeData_df.iloc[i]['SSN'] = '***-**' + employeeData_df.iloc[i]['SSN'][6:]
+    print('***-**' + employeeData_df.iloc[i]['SSN'][6:])
 
 
 #change states
@@ -100,6 +100,6 @@ us_state_abbrev = {
 }
 
 employeeData_df['State'].replace(us_state_abbrev, inplace=True)
-print(employeeData_df.head())
+#print(employeeData_df.head())
 
 
